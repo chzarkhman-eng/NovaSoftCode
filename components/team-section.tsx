@@ -117,30 +117,7 @@ export function TeamSection() {
           ))}
         </div>
 
-        {/* Team Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-20 bg-card rounded-2xl p-8 max-w-4xl mx-auto border border-border shadow-lg"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: "50+", label: "Team Members" },
-              { value: "3", label: "Years Combined Leadership" },
-              { value: "20+", label: "Countries Represented" },
-              { value: "100%", label: "Passion for Innovation" }
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   )

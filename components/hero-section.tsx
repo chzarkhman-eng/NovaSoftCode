@@ -1,16 +1,9 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Trophy, Zap, Lock, Globe } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Zap, Lock, Globe } from "lucide-react"
 
 const benefits = [
-  {
-    icon: Trophy,
-    title: "Award-Winning Quality",
-    description: "Top-rated on Clutch & GoodFirms · 4.9/5 avg rating"
-  },
   {
     icon: Zap,
     title: "Fast & On-Time Delivery",
@@ -68,7 +61,7 @@ export function HeroSection({ compact = false }: HeroSectionProps) {
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-sm font-medium text-white/95">
-                Building Digital Solutions for Global Clients
+                Grow your local business with us
               </span>
             </motion.div>
 
@@ -97,40 +90,12 @@ export function HeroSection({ compact = false }: HeroSectionProps) {
               and enterprises.
             </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-start gap-4"
-            >
-              <Button
-                size="lg"
-                asChild
-                className="bg-white text-slate-900 hover:bg-gray-100 px-8 py-6 text-lg font-semibold shadow-lg"
-              >
-                <Link href="/contact" className="group">
-                  Get a Free Quote
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-2 border-white/90 bg-transparent text-white hover:bg-white/15 hover:text-white px-8 py-6 text-lg shadow-none"
-              >
-                <Link href="/services" className="group">
-                  View Our Services
-                </Link>
-              </Button>
-            </motion.div>
-
             {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="mt-16 grid grid-cols-4 gap-6"
+              className="mt-12 grid grid-cols-4 gap-6"
             >
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">20+</div>
@@ -214,21 +179,7 @@ export function HeroSection({ compact = false }: HeroSectionProps) {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1.5 h-3 rounded-full bg-primary"
-          />
-        </div>
-      </motion.div>
+
     </section>
   )
 }

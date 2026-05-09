@@ -5,32 +5,20 @@ import type { LucideIcon } from "lucide-react"
 import {
   ArrowRight,
   Plane,
-  Smartphone,
-  Factory,
   ShoppingCart,
   Stethoscope,
-  Landmark,
-  Store,
-  Rocket,
   CreditCard,
-  Gamepad2,
 } from "lucide-react"
 
-/** Order: left column top→bottom, then right column; simple monochrome line icons */
-const industriesLeft: { name: string; icon: LucideIcon }[] = [
+/** 
+ * STREAMING_CHUNK:Defining industry data... 
+ * We keep only the 4 requested items.
+ */
+const industries: { name: string; icon: LucideIcon }[] = [
   { name: "Travel & Hospitality", icon: Plane },
-  { name: "Telecommunication", icon: Smartphone },
-  { name: "Oil, Gas, and Energy", icon: Factory },
   { name: "E-commerce", icon: ShoppingCart },
-  { name: "Healthcare & Pharmaceuticals", icon: Stethoscope },
-]
-
-const industriesRight: { name: string; icon: LucideIcon }[] = [
-  { name: "Public Sector", icon: Landmark },
-  { name: "Retail & CPG", icon: Store },
-  { name: "Startups", icon: Rocket },
   { name: "Banking & Fintech", icon: CreditCard },
-  { name: "Gaming", icon: Gamepad2 },
+  { name: "Healthcare & Pharmaceuticals", icon: Stethoscope },
 ]
 
 function IndustryList({ items }: { items: { name: string; icon: LucideIcon }[] }) {
@@ -44,14 +32,16 @@ function IndustryList({ items }: { items: { name: string; icon: LucideIcon }[] }
           <div className="flex items-center justify-between gap-4">
             <div className="flex min-w-0 items-center gap-3 sm:gap-4">
               <Icon
-                className="h-5 w-5 shrink-0 text-foreground/55 sm:h-[1.35rem] sm:w-[1.35rem]"
+                className="h-5 w-5 shrink-0 text-foreground/55 transition-colors duration-200 group-hover:text-primary sm:h-[1.35rem] sm:w-[1.35rem]"
                 strokeWidth={1.75}
                 aria-hidden
               />
-              <span className="text-base font-semibold text-foreground sm:text-lg">{name}</span>
+              <span className="text-base font-semibold text-foreground sm:text-lg">
+                {name}
+              </span>
             </div>
             <ArrowRight
-              className="h-5 w-5 shrink-0 text-foreground/40 opacity-0 transition-opacity duration-200 group-hover:text-primary group-hover:opacity-100"
+              className="h-5 w-5 shrink-0 text-foreground/40 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:text-primary group-hover:opacity-100"
               strokeWidth={1.75}
               aria-hidden
             />
@@ -70,30 +60,37 @@ export function IndustriesSection({ compactSpacing = false }: IndustriesSectionP
   return (
     <section
       id="industries"
-      className={`scroll-mt-24 bg-background ${compactSpacing ? "pt-6 sm:pt-8 pb-6 sm:pb-8" : "py-24 sm:py-32"}`}
+      className={`scroll-mt-24 bg-background ${
+        compactSpacing ? "py-8 sm:py-12" : "py-24 sm:py-32"
+      }`}
     >
       <div className="container relative z-10 mx-auto px-6">
+        {}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className={compactSpacing ? "mb-6 text-center sm:mb-8" : "mb-12 text-center sm:mb-16"}
+          className={compactSpacing ? "mb-8 text-center" : "mb-16 text-center"}
         >
           <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Discover our Impact Across Industries
           </h2>
         </motion.div>
 
+        {}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45, delay: 0.05 }}
-          className="mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-2 md:gap-x-16 lg:gap-x-24"
+          /* 
+             Changed from grid-cols-2 to a single column 
+             max-w-2xl and mx-auto centers the content nicely 
+          */
+          className="mx-auto max-w-2xl"
         >
-          <IndustryList items={industriesLeft} />
-          <IndustryList items={industriesRight} />
+          <IndustryList items={industries} />
         </motion.div>
       </div>
     </section>

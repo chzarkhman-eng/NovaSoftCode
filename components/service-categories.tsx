@@ -3,15 +3,14 @@
 import { motion } from "framer-motion"
 
 const categories = [
-  "Learning",
-  "Cybersecurity",
-  "Data Science",
-  "Cloud & DevOps",
-  "UI/UX Design",
   "Web Development",
   "Mobile Apps",
+  "Cloud & DevOps",
   "AI & Machine Learning",
-  "Cybersecurity",
+  "Intelligent Automation",
+  "E-commerce",
+  "Digital Transformation",
+  "Custom Software",
 ]
 
 export function ServiceCategories() {

@@ -42,51 +42,6 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    slug: "blockchain-emerging-technologies",
-    title: "Blockchain & Emerging Technologies",
-    image: "/services/Blockchain-Emerging-Technologies.jpeg",
-    pitch:
-      "Build trust architectures that are sober about risk: custody, contracts, and operations—not buzzwords. We help you choose when distributed ledgers add real value, then engineer for security, compliance, and long-term maintainability.",
-    overview:
-      "Emerging technology should reduce uncertainty, not create it. We work with leadership, legal, and engineering to clarify the problem: provenance, settlement, programmable incentives, partner ecosystems, or digital credentials. From that clarity we define an architecture that is proportionate—what belongs on-chain, what belongs off-chain, and how upgrades and incidents are handled when real money and reputation are involved.\n\nOur engineering emphasizes key management, contract testing, indexing, and operational monitoring. We plan for chain reorgs, oracle failure modes, and user onboarding friction, because launches succeed when the boring parts are done well. Whether you are validating an MVP or hardening a production network, we focus on auditability, least privilege, and runbooks your team can execute.\n\nWe also help you communicate credibly: security packs for enterprise buyers, threat models for internal risk teams, and pragmatic roadmaps that separate experiments from commitments.\n\nNovaSoftCode treats Web3 and adjacent stacks as software delivery problems—shipping, support, and continuous improvement—not one-time events.",
-    capabilities: [
-      "Architecture and threat modeling: custody models, signing flows, and recovery planning",
-      "Smart-contract development, test coverage, upgrade patterns, and formal review support",
-      "Off-chain services: APIs, indexers, event pipelines, and reconciliation jobs",
-      "Wallet UX, gas abstraction strategies, and fraud/abuse considerations",
-      "Operational readiness: monitoring, alerting, incident response, and change management",
-    ],
-    outcomes: [
-      "Launch decisions your security and legal stakeholders can defend",
-      "Reduced exploit and operational surprise through disciplined engineering habits",
-      "Clear separation between proof-of-value and platform-scale investment",
-      "Documentation and playbooks that keep delivery sustainable after go-live",
-    ],
-  },
-  {
-    slug: "cybersecurity-quality-assurance",
-    title: "Cybersecurity & Quality Assurance",
-    image: "/services/Cybersecurity-Quality-Assurance.jpeg",
-    pitch:
-      "Make security and QA part of velocity—not a late surprise. NovaSoftCode embeds secure design, automated testing, and release evidence into the way your product is built, so stakeholders can sign off with confidence.",
-    overview:
-      "Fast teams break when quality and security are treated as final gates. We shift risk left with lightweight threat modeling, secure defaults in frameworks, and dependency hygiene that scales. Security findings become actionable backlog items with owners, not ambiguous “fix later” notes.\n\nOn the QA side, we align test strategy to business risk: what must never break, what can degrade gracefully, and where automation pays off first. We combine API and UI automation, performance and resilience checks, and exploratory testing where human judgment finds edge cases machines miss. Accessibility and privacy-sensitive flows get the same rigor as revenue paths.\n\nFor releases, we emphasize traceability—requirements to tests to deployments—so audits and customer questionnaires become faster to answer. When incidents happen, telemetry and runbooks shorten time to recovery and prevent repeat classes of failure.\n\nWhether you are preparing for enterprise procurement, hardening a consumer app, or stabilizing a legacy modernization, we help you build a credible narrative backed by evidence, not promises.",
-    capabilities: [
-      "Secure SDLC: design reviews, STRIDE-style threat modeling, and secure coding guidance",
-      "Application security testing alignment: SAST/DAST, dependency scanning, secret detection",
-      "IAM patterns, least privilege, secrets management, and environment segregation",
-      "Test strategy, risk-based coverage, CI automation, and flake reduction",
-      "Performance, load, and chaos-informed testing for critical paths",
-      "Release governance: quality gates, evidence packs, and defect analytics",
-    ],
-    outcomes: [
-      "Fewer critical vulnerabilities escaping to production over time",
-      "More predictable releases with clearer accountability and metrics",
-      "Shorter enterprise security reviews with substantiated controls",
-      "Lower customer-impacting defects on the journeys that matter most",
-    ],
-  },
-  {
     slug: "devops",
     title: "DevOps",
     image: "/services/devops.png",
@@ -130,52 +85,6 @@ export const SERVICES: Service[] = [
       "Fewer stockouts, cancellations, and post-purchase support escalations",
       "Merchandising and ops teams empowered with trustworthy data",
       "A technical foundation that supports the next channel or market expansion",
-    ],
-  },
-  {
-    slug: "gaming-metaverse-immersive-experiences",
-    title: "Gaming, Metaverse & Immersive Experiences",
-    image: "/services/Gaming-Metaverse-Immersive-Experiences.jpeg",
-    pitch:
-      "Players feel quality in frame time, netcode, and polish. We build immersive experiences and game-tech with production discipline—profiling, networking tradeoffs, and pipelines that keep art and engineering aligned.",
-    overview:
-      "Immersive products fail when ambition outruns performance budgets. We work early to define targets: devices, session length, networking model, and content throughput. Engineering choices follow—rendering paths, LOD strategies, asset formats, and multiplayer authority models that match your player expectations.\n\nFor live experiences, telemetry and moderation hooks are part of the architecture, not bolt-ons. We help instrument funnels, detect abuse patterns, and support live ops with tooling that designers and producers can actually use.\n\nWhether you are shipping a competitive multiplayer mode, a spatial training experience, or a brand metaverse activation, we emphasize shippable increments: prototypes that answer real questions, milestones with visible risk reduction, and performance passes that land before marketing beats.\n\nNovaSoftCode collaborates closely with art and design so visuals survive optimization, and with product so scope stays honest as deadlines approach.",
-    capabilities: [
-      "Gameplay and systems programming with platform-specific performance tuning",
-      "Multiplayer backends, matchmaking, replication strategies, and latency mitigation",
-      "3D pipelines, optimization passes, and device-tier scaling",
-      "AR/VR comfort settings, interaction design support, and profiling",
-      "Live ops foundations: events, economy tooling, telemetry, and anti-abuse hooks",
-      "Build automation, crash analytics, and release management for continuous delivery",
-    ],
-    outcomes: [
-      "Sessions that feel responsive and fair across target hardware",
-      "Earlier visibility into schedule risk through measurable milestones",
-      "Better retention signals from stability, polish, and networking quality",
-      "Production pipelines that keep content flowing without engineering bottlenecks",
-    ],
-  },
-  {
-    slug: "ui-ux-design",
-    title: "UI/UX Design",
-    image: "/services/ui-ux-designer.jpeg",
-    pitch:
-      "Design that converts and scales: research-backed flows, accessible interfaces, and a system your developers can ship without ambiguity. We make the handoff as strong as the mockups.",
-    overview:
-      "Great UX is measured in completion rates, time-on-task, and support tickets—not opinions alone. We combine qualitative insight with analytics where available, then iterate in prototypes before engineering pays the cost of rework. Every screen ties back to a decision: what the user needs next, what the business needs to validate, and what edge cases cannot be ignored.\n\nWe build design systems with tokens, components, and documentation so visual consistency holds across teams and releases. Motion and content are treated as part of the experience, not decoration. Accessibility and responsive behavior are embedded from the start, reducing late-stage surprises and legal risk.\n\nDeveloper handoff includes specs, states, and QA checklists so implementation matches intent. We can embed with engineering for UX QA during build, catching mismatches early when fixes are cheap.\n\nNovaSoftCode helps startups establish a credible product face and helps enterprises modernize fragmented UIs without losing brand coherence.",
-    capabilities: [
-      "Discovery: interviews, journey maps, jobs-to-be-done, and competitive benchmarking",
-      "Wireframes and high-fidelity UI with iterative usability validation",
-      "Design systems: components, tokens, accessibility notes, and usage guidelines",
-      "Prototyping for complex flows: onboarding, payments, admin tools, and dashboards",
-      "Developer handoff packages and collaborative refinement during implementation",
-      "Heuristic audits and post-launch optimization based on data and feedback",
-    ],
-    outcomes: [
-      "Higher completion and conversion on critical user paths",
-      "Consistent brand and interaction patterns across surfaces",
-      "Faster engineering cycles with fewer back-and-forth clarifications",
-      "Lower accessibility and usability risk before you scale traffic",
     ],
   },
   {

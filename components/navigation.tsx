@@ -12,7 +12,6 @@ const mainNavLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "About", href: "/about" },
-  { name: "Leadership", href: "/leadership" },
   { name: "Contact Us", href: "/contact" },
 ]
 

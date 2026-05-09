@@ -185,7 +185,7 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* CTA Card */}
+            {/* CTA Card
             <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-6 text-primary-foreground shadow-lg">
               <h4 className="font-semibold mb-2">
                 Ready to start your project?
@@ -199,7 +199,7 @@ export function ContactSection() {
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
